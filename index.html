@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Website</title>
+        <link href="style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body  >
+      <div class="content" id="blur">
+        <!--header contans logo , navbar list and 
+          (checkbox and checkbox) for small screen-->
+        <header >
+            <var class="logo">website</var>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <nav>
+                <ul class="navbarlist">
+                  <li><a class="listLink " href ="#">Home</a></li>
+                  <li><a class="listLink" href ="#">portfolio</a></li>
+                  <li><a class="listLink"  href ="#">About</a></li>
+                  <li><a class="listLink"  href ="#">Contact</a></li>
+                  <li><a class="listLink"  href ="#">Blog</a></li>
+                  <li><a class="listLink"  href ="#">search <img src="images/search.png" ></a></li>
+                </ul>
+            </nav>
+            <label for="checkbox class="nav-toggle-label">
+                <span></span>
+              </label>
+        </header>
+        <!--start of dividing the page into sections-->
+        <section class = "slideshow" >
+            
+            <div class="mySlides fade">
+                
+                <img src="images/programming.png" style="width:100%">
+                
+                
+              </div>
+              <div class="mySlides fade">
+                
+                <img src="images/shopping.png" style="width:100%">
+                
+              </div>
+              <div class="mySlides fade">
+                
+                <img src="images/socialMedia.png" style="width:100%">
+                
+              </div>
+              <div class="mySlides fade">
+                
+                <img src="images/path.png" style="width:100%">
+              </div>
+            <var class = "title"><h1>good design is good business</h1></var>
+            <var class = "text"><h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
+                 <br> commodi quidem iste harum in alias corporis neque facere sequi ducimus vel, <br>
+                reiciendis fugit voluptas distinctio iure reprehenderit ex aliquam!</h3></var>
+            <button class="btn" onclick="toggle()">learn more</button>
+        </section>
+        
+        <section class = "services">
+          <div id="webDesign" class ="from-left">
+            <h2>Web Design</h2>
+            <img src="images/programming.png" style="width:100%">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Blanditiis eos, ad hic totam culpa, nam minus pariatur est nihil aspernatur maiores explicabo? Mollitia quo pariatur impedit porro,
+               doloribus recusandae vitae . <a href="#" >Details...</a></p>
+            
+          </div>
+
+          <div id="onlineShop">
+            <h2>Online Shop</h2>
+            <img src="images/shopping.png" style="width:100%">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Blanditiis eos, ad hic totam culpa, nam minus pariatur est nihil aspernatur maiores explicabo? Mollitia quo pariatur impedit porro,
+               doloribus recusandae vitae . <a href="#">Details...</a></p>
+               
+          </div>
+          <div id="socialMedia" class="from-right">
+            <h2>Social Media</h2>
+            <img src="images/socialMedia.png" style="width:100%">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Blanditiis eos, ad hic totam culpa, nam minus pariatur est nihil aspernatur maiores explicabo? Mollitia quo pariatur impedit porro,
+               doloribus recusandae vitae . <a href="#">Details...</a></p>
+               
+          </div>
+        </section>  
+        <section class = "offer">
+         <h1>What we offer </h1>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia vel ipsum, sequi distinctio tempora nisi corporis exercitationem atque
+          , temporibus dolorem hic fugiat doloremque facere ipsa debitis. Et maxime excepturi error!</p>
+        
+         <div class = "offer_content" >
+          <div id="webDesign">
+            <h2>Web Design</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Blanditiis eos, ad hic totam culpa, nam minus pariatur est nihil aspernatur maiores explicabo? Mollitia quo pariatur impedit porro,
+               doloribus recusandae vitae . <a href="#">>>></a></p>
+          
+          </div>
+          <div id="onlineShop">
+            <h2>Online Shop</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Blanditiis eos, ad hic totam culpa, nam minus pariatur est nihil aspernatur maiores explicabo? Mollitia quo pariatur impedit porro,
+               doloribus recusandae vitae . <a href="#">>>></a></p>
+               
+          </div>
+          <div id="socialMedia">
+            <h2>Social Media</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Blanditiis eos, ad hic totam culpa, nam minus pariatur est nihil aspernatur maiores explicabo? Mollitia quo pariatur impedit porro,
+               doloribus recusandae vitae . <a href="#">>>></a></p>
+               
+          </div>
+        </div> 
+        </section>
+        <section class = "testimonials fade-in">
+          <h1>testimonials</h1>
+          <h3><q>Lorem ipsum dolor Lsit amet consectetur adipisicing elit. Ab expedita doloribus minus. Minus excepturi veniam ea dignissimos at fuga vel, 
+            ipsa ducimus dolorum iste laudantium accusantium odit dolore quia</q></h3>
+          <div class="testimonials_content">
+            <img src="images/woman_icon.png" alt=""><img src="images/man_icon.png" alt=""><img src="images/woman_icon.png" alt="">
+          </div>  
+        </section>
+        <!--end of dividing the page into sections-->
+        <!--dividing a footer into parts depending on their positions
+           in the footer in a large screen(left , right , center) -->
+          <footer class="footer-distributed ">
+            
+            <div class="footer-left from-bottom">
+              <div class = "newsletter">
+                <h3>newsletter</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br> 
+                  Beatae vero pariatur laudantium distinctio neque quibusdam <br>
+                  repellat ab sapiente quaerat temporibus atque doloremque <br>
+                  voluptatibus quisquam quos,animi deleniti sit sequi excepturi.</p>
+                <input type="text" id="address" placeholder="enter yor address"> 
+              </div>
+      
+              <p class="footer-links from-bottom">
+                  <a href ="#">Home</a>
+                  |
+                  <a href ="#">portfolio</a>
+                  |
+                  <a href ="#">About</a>
+                  |
+                  <a href ="#">Contact</a>
+                  |
+                  <a href ="#">Blog</a>
+                  |
+                  <a href ="#">search</a>
+                  
+              </p>
+      
+              <p class="footer-copy-right from-bottom">© 2020 website</p>
+            </div>
+      
+            <div class="footer-center from-bottom">
+              <h3>contact</h3>
+              <div>
+                <i class="fa fa-map-marker"> Al Madinah Al Munawwarah - 000000</i>
+                  
+              </div>
+      
+              <div>
+                <i class="fa fa-phone"> +00 00-00000000</i>
+                
+              </div>
+              <div>
+                <i class="fa fa-envelope"><a href="support@website.com"> support@website.com</a></i>
+                
+              </div>
+            </div>
+            <div class="footer-right from-bottom">
+              <h3>About the company</h3>  
+              <p class="footer-company-about">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, omnis dolor.<br>
+                 Assumenda pariatur unde neque cupiditate. Veniam modi omnis deserunt <br>
+                 praesentium suscipit, pariatur id odit voluptates saepe odio veritatis asperiores!.
+              <div class="footer-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+              </div>
+
+              
+            </div>
+           
+          </footer>
+        
+       
+      </div>
+      <div id ="popup">
+        <h2>Learn more </h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore laborum,<br>
+           impedit magnam voluptas doloremque a in laboriosam eius consequatur tenetur, <br>
+           corrupti ad numquam, at corporis ullam hic. Fuga, autem beatae!</p>
+        <button class="btn" onclick="toggle()">close</button></p>   
+      </div> 
+    </body> 
+     
+    <script src="app.js"></script>  
+</html>    

@@ -1,0 +1,443 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@font-face{
+  font-family: "titleFont";
+  src:url("externalFonts/PaperWorks.ttf");
+  font-family: "logoFont";
+  src:url("externalFonts/Giette.ttf");
+}
+
+ 
+.content {
+  height: 200vh;
+
+  place-items: center;
+}
+body{
+  margin: 0;
+}
+
+
+h1{
+  text-transform: uppercase;
+  text-align: center;
+  font-family: titleFont;
+  font-size: 1rem;
+}
+header {
+  background-color:rgb(255, 230, 232);
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  padding: 0.5rem;
+  
+}
+
+/* navigation styles */
+.nav-toggle {
+  position: absolute ;
+  top: -9999px ;
+  left: -9999px ;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+  outline: 3px solid rgba(white, .75);
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background:black;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+  
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background:rgb(255, 230, 232); 
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  
+  padding: 1rem;
+  list-style: none;
+}
+
+nav li {
+    
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: rgb(24, 23, 23);
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  
+  background-color:white;
+  padding: 0.5rem;  
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+nav img{
+   
+    width: 10px;
+    height: 10px;
+    
+   }
+
+ /* slideshow style*/  
+
+.slideshow img{
+ 
+  height: 450px;
+  max-width: 100%;
+  opacity: 0.3;
+}
+.slideshow .text {
+  text-align: center; 
+}
+
+.slideshow .title {
+  position: absolute;
+  top: 15%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.slideshow .text {
+  position: absolute;
+  top: 20%;
+}
+.slideshow .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color:black;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+.slideshow .btn:hover {
+  background-color: black;
+  text-decoration: underline;
+
+}
+/* add filter to the page when appears the popup message */
+.content#blur.active {
+  filter: blur(20px);
+}
+/*popup message style*/
+#popup {
+  position: fixed;
+  top:40%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 50px;
+  box-shadow: 0 5px 30px rgba(0,0,0,.30);
+  background-color:#333;
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+
+}
+#popup.active {
+  top:50%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+#popup .btn:hover {
+  background-color:rgb(255, 230, 232);
+
+}
+/* services section style */
+.services {
+    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  background-color: #333;
+}
+#webDesign , #onlineShop , #socialMedia{
+  width: 250px;
+  height: 450px;
+  text-align: center;
+}
+
+.services a {
+  color:rgb(255, 230, 232);
+}
+/*animation style of services section */
+.from-left{
+  transform: translateX(-50%);
+}
+.from-right{
+  transform: translateX(50%);
+}
+.from-left ,.from-right {
+  transition: transform 1000ms ease-in;
+}
+.from-left.appear , .from-right.appear  {
+  transform: translateX(0);
+}
+/* offer section style */
+.offer {
+  padding-top: 1rem;
+  background-color:rgb(252, 248, 248);
+  text-align: center;
+}
+.offer h2 , .offer h1 , .offer a{
+  color: rgb(2, 2, 85);
+}
+.offer_content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
+  
+}
+.offer_content #webDesign , .offer_content #onlineShop , .offer_content #socialMedia{
+  height: 30%;
+} 
+/* testimonials section style */
+.testimonials{
+  padding-top: 1rem;
+  text-align: center;
+  background-color:rgb(255, 230, 232) ;
+}
+.testimonials h3{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  
+}
+
+.testimonials_content img {
+    vertical-align: middle;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding-top: 5rem;    
+}
+/*animation style of testimonials section */
+.fade-in {
+  opacity: 0;
+  transition: opacity 2000ms ease-in;
+}
+.fade-in.appear {
+  opacity: 1;
+}
+
+/*footer style */
+footer {
+  background-color: #333;
+  font-size: 3mm;
+  color:white;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer h3 {
+  text-transform: uppercase;
+
+}
+footer a{
+  color:  rgb(255, 230, 232);
+}
+footer input {
+  background-color: rgb(255, 230, 232);
+}
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+.footer-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+}
+/*animation style of footer */
+.from-bottom{
+  transform: translateY(50%);
+  transition: transform 1000ms ease-in;
+}
+
+.from-bottom.appear   {
+  transform: translateY(0);
+}
+/* design large screen */
+@media screen and (min-width: 800px) {
+
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    position: unset;
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    padding: 0;
+  }
+  
+  .logo {
+    grid-column: 1 / 2;
+    padding-left: 0rem;
+    font-family: logoFont;
+    font-size: 2rem;
+}
+  
+  
+  nav {
+     all: unset; 
+
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+    top: initial;
+    left: initial;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav ul {
+    display: flex;
+  }
+  
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+  
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+  section {
+    position: relative;
+    min-height: 80vh;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    
+}
+h1{
+  font-size: 2.5rem;
+}
+.slideshow img{
+  height: 500px;
+  
+}
+.slideshow .title {
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.slideshow .text {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.slideshow .btn { 
+  top: 70%; 
+}
+.services {
+  flex-direction: row;
+}
+#webDesign , #onlineShop , #socialMedia{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.offer_content{
+  flex-direction: row;
+  justify-content: space-around;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: start;
+}
+
+}
